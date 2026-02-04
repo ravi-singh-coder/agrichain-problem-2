@@ -1,0 +1,61 @@
+# Requirements & Test Documentation (AgriChain)
+
+## Project Overview
+This application accepts a string input on the Home page.
+On clicking Submit, it navigates to the Result page and displays:
+- Longest substring without repeating characters
+- Length of that substring
+
+---
+
+## Test Scope
+### In Scope
+- Functional validation of substring logic
+- UI navigation between pages
+- Input validation (blank, special chars, numbers)
+- Security checks (XSS/HTML injection)
+- Automation regression suite
+
+### Out of Scope
+- Backend database validation
+- Load testing beyond basic observation
+
+---
+
+## Manual Test Cases Summary
+- Verify correct output for standard inputs (abcabcbb → 3)
+- Verify handling of edge cases (empty input, single char)
+- Verify special characters and spaces
+- Verify security inputs are treated safely
+
+---
+
+## Automation Coverage
+Automated cases AUTO-F-001 to AUTO-F-009 include:
+- Repeating patterns
+- Unique strings
+- Blank input validation
+- Symbols and numeric inputs
+- Back navigation verification
+- Screenshot capture on failure
+
+---
+
+## Execution Instructions
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run automation suite:
+   pytest -v
+
+3. Screenshots on failure stored in:
+   screenshots/
+
+---
+
+## Tools Used
+- Python
+- Selenium WebDriver
+- PyTest Framework
+- Page Object Model (POM)
+
